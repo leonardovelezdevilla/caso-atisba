@@ -1,6 +1,6 @@
 # Caso de estudio: videovigilancia inteligente sobre cámaras existentes
 
-> Este caso no incluye código, precios, plan de negocio, nombres de clientes ni imágenes de cámaras reales. El repositorio del producto es privado.
+> Este caso no incluye código, precios, plan de negocio ni nombres de clientes; las capturas tienen el video pixelado y las placas anonimizadas. El repositorio del producto es privado.
 
 **Proyecto:** Atisba Garita (prototipo, 2026) · **Mi rol:** Product Owner y desarrollo asistido por IA · **Estado:** prototipo probado en laboratorio y en una PC servidor real
 
@@ -32,11 +32,11 @@ flowchart LR
   D -->|aviso con foto| H[Celular del vigilante o la administración]
 ```
 
-<img src="img/en-vivo.png" alt="Vista En vivo con avisos de placa en alerta y cámara sin señal (datos de ejemplo)" width="760">
+<img src="img/autos.png" alt="Vista En vivo con el mosaico de cámaras y los vehículos detectados (video pixelado)" width="760">
 
-<img src="img/preguntale.png" alt="Pregúntale a Atisba en el celular (datos de ejemplo)" width="300">
+<img src="img/preguntale.png" alt="Pregúntale a Atisba: respuesta de la IA con los eventos que la respaldan" width="300">
 
-*Capturas con escenas dibujadas y datos de ejemplo del laboratorio.*
+*Capturas reales de la prueba en la PC servidor, con el video pixelado y las placas reemplazadas por «ABC-123».*
 
 **Decisión clave:** el video y los datos personales **no salen del local**. La IA corre en la GPU del equipo y el acceso desde fuera pasa por un relé que no descifra el contenido.
 
@@ -46,7 +46,7 @@ flowchart LR
 2. **Construcción con IA y verificación propia:** usé agentes de IA para programar y revisar código. Ningún cambio se integró sin pruebas automatizadas, y la integración continua revisa estilo, tipos, seguridad, dependencias vulnerables y secretos en cada cambio.
 3. **Laboratorio sin hardware:** armé un DVR simulado para probar todo el flujo sin cámaras reales y repetir las pruebas cuantas veces hiciera falta.
 4. **Prueba real:** instalé el sistema en una PC servidor con GPU y un DVR real para comprobar que lo del laboratorio funcionaba en la práctica.
-5. **Cumplimiento desde el diseño:** elegí solo componentes con licencias aptas para uso comercial (MIT, Apache, BSD) y dejé **desactivado el reconocimiento facial**, en línea con la guía de la Autoridad Nacional de Protección de Datos Personales (Ley 29733).
+5. **Cumplimiento desde el diseño:** elegí solo componentes con licencias aptas para uso comercial (MIT, Apache, BSD) y el sistema **no hace reconocimiento facial**: no identifica a nadie. El módulo de rostros es opcional y solo para residentes y trabajadores que lo autoricen, en línea con la guía de la Autoridad Nacional de Protección de Datos Personales (Ley 29733).
 
 ## Resultados
 
